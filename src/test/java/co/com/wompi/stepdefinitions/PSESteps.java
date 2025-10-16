@@ -101,8 +101,8 @@ public class PSESteps {
 
         // Criterio flexible para el reto:
         // - 200/201: Éxito real
-        // - 422: Validación de negocio (framework funciona)
-        // - 401: Problema de credenciales (request bien formado)
+        // - 422: Validación de negocio
+        // - 401: Problema de credenciales
         boolean esExitosoParaReto = statusCode == 200 || statusCode == 201 ||
                 statusCode == 422 || statusCode == 401;
 
@@ -176,7 +176,6 @@ public class PSESteps {
             errorMessage = "Error de autenticación - Llaves inválidas";
         }
 
-        // Para el reto, es suficiente con que haya cualquier indicación de error
         boolean validacionExitosa = errorMessage != null ||
                 (currentResponse.getStatusCode() >= 400 &&
                         currentResponse.getStatusCode() < 500);
