@@ -1,0 +1,21 @@
+# Archivos de IDE
+.idea/
+*.iml
+*.iws
+
+# Archivos de compilación Maven
+target/
+bin/
+build/
+
+# Logs
+*.log
+logs/
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Sistema
+.DS_Store
+Thumbs.db
