@@ -17,7 +17,6 @@ public class PSETransactionRequest {
 
     /**
      * Clase interna que representa el método de pago PSE
-     * Contiene todos los campos específicos requeridos por Wompi para PSE
      */
     public static class PaymentMethod {
         public String type;  // Tipo de pago: "PSE"
