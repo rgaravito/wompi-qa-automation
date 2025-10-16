@@ -11,9 +11,6 @@ import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Step Definitions para los escenarios BDD de transacciones PSE
- */
 public class PSESteps {
 
     // Cliente para interactuar con la API de Wompi
@@ -29,8 +26,6 @@ public class PSESteps {
         // Verificar que podemos conectarnos a la API
         Response merchantResponse = wompiClient.getMerchant();
 
-        // El error 404 es normal en sandbox (merchant no existe)
-        // El error 401 indicaría problemas de autenticación
         if (merchantResponse.getStatusCode() == 401) {
             fail("Error de autenticación - Verifica las llaves de UAT");
         }
